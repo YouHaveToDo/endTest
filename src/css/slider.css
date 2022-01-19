@@ -1,0 +1,109 @@
+body {
+  overflow: hidden;
+}
+
+.slider {
+  position: relative;
+}
+
+.sliderDiv {
+  display: inline-block;
+  padding: 0 12px;
+  position: relative;
+}
+
+.sliderTrack {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: 0.5s ease-out;
+  transform: translateX(-10%);
+}
+
+.controller {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+.controller p {
+  width: 30px;
+  height: 60px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  opacity: 0.5;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.controller p.prev {
+  left: calc((100% - 1210px) / 2);
+}
+.controller p.next {
+  right: calc((100% - 1200px) / 2);
+}
+.controller p svg {
+  width: 16px;
+  height: 16px;
+}
+.controller p.next svg {
+  transform: rotate(-180deg);
+}
+
+.infoBox {
+  position: absolute;
+  width: 330px;
+  height: 146px;
+  background-color: #fff;
+  bottom: 28px;
+  left: 34px;
+  border-radius: 4px;
+}
+
+.infoTop {
+  padding: 20px 20px;
+}
+.infoTop h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+  line-height: 1.5;
+}
+.infoTop p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.64;
+}
+
+.infoBot {
+  border-top: 1px solid #e1e2e3;
+  box-sizing: border-box;
+}
+
+.infoBot p {
+  margin: 6px 0 0 13px;
+  padding: 6px 8px;
+  line-height: 30px;
+  font-size: 14px;
+  color: #3366ff;
+  display: inline-block;
+}
+
+.infoBot svg {
+  width: 14px;
+  height: 14px;
+  fill: #3366ff;
+  transform: rotate(-180deg);
+  margin-bottom: -2px;
+}
+
+@media screen and (max-width: 1200px) {
+  .sliderDiv > img {
+    width: 80vw;
+    height: 183px;
+  }
+}
